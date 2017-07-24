@@ -1,0 +1,14 @@
+{
+  "name": "Contect-List",
+  "version": "0.0.1",
+  "description": "Simple contect list application.",
+  "main": "server.js",
+  "author": "my-app",
+  "dependencies": {
+    "body-parser": "~1.4.3",
+    "express": "~4.13.4",
+    "mongodb": "2.2.30",
+    "request": "2.81.0"
+  },
+  "engine": "node 0.6.x"
+}

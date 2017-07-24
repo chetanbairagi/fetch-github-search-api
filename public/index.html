@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <title>Git Search Repositories</title>
+</head>
+<body>
+  <div class="container" ng-app="contctApp" ng-controller="AppCtrl">
+  <h1>Tokens</h1>
+<div class="row">
+  <div class="form-group col-md-4">
+    <input type="text" class="form-control" id="searchId" placeholder="Search token">
+  </div>
+    <div class="col-md-4">
+       <button type="button" class="btn btn-primary" ng-click="submit()">Submit</button>
+    </div>
+</div>
+    <table class="table">
+      <thead>
+        <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>owner id</th>
+        <th>owner avatar_url</th>
+        <th>open_issues</th>
+        <th>forks</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in data">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.owner_id}}</td>
+          <td>{{user.owner_avatar_url}}</td>
+          <td>{{user.open_issues}}</td>
+          <td>{{user.forks}}</td>
+    </tr>
+    </tbody>
+    </table>
+  </div>
+    <script src="controllers/controller.js"></script>
+</body>
+</html>
